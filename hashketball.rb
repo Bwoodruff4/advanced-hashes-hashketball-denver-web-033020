@@ -277,7 +277,8 @@ def player_with_longest_name
   hash.each{|team,attributes|
     players=attributes[:players]
     players.each{|player_hash|
-      if player_hash[:player_name].length > longest_name_length
+    player_name=player_hash[:player_name]
+      if player_name.length > longest_name_length
         longest_name_length=player_hash[:player_name].length
         result = player_hash[:player_name]
       end
