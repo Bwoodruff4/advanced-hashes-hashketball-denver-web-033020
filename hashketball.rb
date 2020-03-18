@@ -255,8 +255,9 @@ def winning_team
   hash = game_hash
   teams_array=team_names
   first_team=team_array[0]
-  first_team_points=
-  second_team_points=0
+  second_team=team_array[1]
+  first_team_points=total_team_points(first_team)
+  second_team_points=total_team_points(first_team)
   
   
   hash.each{|team,attributes|
