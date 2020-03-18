@@ -237,6 +237,10 @@ def most_points_scored
   result
 end
 
+def total_team_points(name)
+  
+end
+
 def winning_team
   hash = game_hash
   team_points=0
