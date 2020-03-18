@@ -238,7 +238,19 @@ def most_points_scored
 end
 
 def total_team_points(name)
-  
+  hash = game_hash
+  total=0
+  hash.each{|team,attributes|
+    if attributes[:team_name] == name
+      players=attributes[:players]
+      players.each{|player_hash|
+        if player_hash[:player_name] == name
+          result = player_hash
+          result.delete(:player_name)
+    }
+    end
+  }
+  total
 end
 
 def winning_team
