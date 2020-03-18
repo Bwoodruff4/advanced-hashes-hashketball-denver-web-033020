@@ -230,7 +230,7 @@ def most_points_scored
     players.each{|player_hash|
       if player_hash[:points] > most_points
         most_points=player_hash[:points]
-        result = player_hash[:points]
+        result = player_hash[:player_name]
       end
     }
   }
