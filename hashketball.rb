@@ -244,9 +244,7 @@ def total_team_points(name)
     if attributes[:team_name] == name
       players=attributes[:players]
       players.each{|player_hash|
-        if player_hash[:player_name] == name
-          result = player_hash
-          result.delete(:player_name)
+          total += player_hash[:points]
     }
     end
   }
