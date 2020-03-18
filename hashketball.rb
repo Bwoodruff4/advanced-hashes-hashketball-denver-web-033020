@@ -253,7 +253,7 @@ end
 
 def winning_team
   hash = game_hash
-  team_points=0
+  first_team_points=0
   hash.each{|team,attributes|
     players=attributes[:players]
     players.each{|player_hash|
