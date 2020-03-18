@@ -253,8 +253,8 @@ end
 
 def winning_team
   teams_array=team_names
-  first_team=team_array[0]
-  second_team=team_array[1]
+  first_team=teams_array[0]
+  second_team=teams_array[1]
   first_team_points=total_team_points(first_team)
   second_team_points=total_team_points(second_team)
   victor=nil
