@@ -252,22 +252,20 @@ def total_team_points(name)
 end
 
 def winning_team
-  hash = game_hash
   teams_array=team_names
   first_team=team_array[0]
   second_team=team_array[1]
   first_team_points=total_team_points(first_team)
-  second_team_points=total_team_points(first_team)
+  second_team_points=total_team_points(second_team)
+  victor=nil
   
+  if first_team_points > second_team_points
+    victor=first_team
+  elsif first_team_points < second_team_points
+    victor=second_team
+  else
+    victor="Tie Game"
+  end
   
-  hash.each{|team,attributes|
-    players=attributes[:players]
-    players.each{|player_hash|
-      if player_hash[:points] > most_points
-        most_points=player_hash[:points]
-        result = player_hash[:player_name]
-      end
-    }
-  }
-  result
+  victor
 end
